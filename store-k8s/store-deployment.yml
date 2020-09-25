@@ -87,5 +87,3 @@ spec:
               path: /management/health
               port: http
             initialDelaySeconds: 120
-      imagePullSecrets:
-          - name: regcred

@@ -9,7 +9,7 @@
     "dockerPushCommand": "docker push",
     "kubernetesNamespace": "jhipster",
     "kubernetesServiceType": "LoadBalancer",
-    "kubernetesUseDynamicStorage": false,
+    "kubernetesUseDynamicStorage": true,
     "kubernetesStorageClassName": "",
     "ingressDomain": "",
     "monitoring": "no",
