@@ -20,10 +20,6 @@ exit 0
 
 logSummary() {
     echo ""
-        echo "#####################################################"
-        echo "Please find the below useful endpoints,"
-        echo "JHipster Console - http://jhipster-console.jhipster."
-        echo "#####################################################"
 }
 
 default() {
@@ -33,7 +29,6 @@ default() {
     kubectl apply -f invoice-${suffix}/
     kubectl apply -f notification-${suffix}/
     kubectl apply -f store-${suffix}/
-    kubectl apply -f console-${suffix}/
 
 }
 

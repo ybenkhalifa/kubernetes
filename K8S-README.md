@@ -5,12 +5,12 @@
 You will need to push your image to a registry. If you have not done so, use the following commands to tag and push the images:
 
 ```
-$ docker image tag invoice docker.pkg.github.com/jhipsterapps/invoice
-$ docker push docker.pkg.github.com/jhipsterapps/invoice
-$ docker image tag notification docker.pkg.github.com/jhipsterapps/notification
-$ docker push docker.pkg.github.com/jhipsterapps/notification
-$ docker image tag store docker.pkg.github.com/jhipsterapps/store
-$ docker push docker.pkg.github.com/jhipsterapps/store
+$ docker image tag invoice docker.pkg.github.com/jhipsterapps/kubernetes/invoice
+$ docker push docker.pkg.github.com/jhipsterapps/kubernetes/invoice
+$ docker image tag notification docker.pkg.github.com/jhipsterapps/kubernetes/notification
+$ docker push docker.pkg.github.com/jhipsterapps/kubernetes/notification
+$ docker image tag store docker.pkg.github.com/jhipsterapps/kubernetes/store
+$ docker push docker.pkg.github.com/jhipsterapps/kubernetes/store
 ```
 
 ## Deployment
@@ -59,20 +59,6 @@ $ kubectl set image deployment/<app-name>-app <app-name>=<new-image>  -n jhipste
 
 Using livenessProbes and readinessProbe allow you to tell Kubernetes about the state of your applications, in order to ensure availablity of your services. You will need minimum 2 replicas for every application deployment if you want to have zero-downtime deployed.
 This is because the rolling upgrade strategy first stops a running replica in order to place a new. Running only one replica, will cause a short downtime during upgrades.
-
-## Monitoring tools
-
-### JHipster console
-
-Your application logs can be found in JHipster console (powered by Kibana). You can find its service details by
-
-```
-$ kubectl get svc jhipster-console -n jhipster
-```
-
-- If you have chosen _Ingress_, then you should be able to access Kibana using the given ingress domain.
-- If you have chosen _NodePort_, then point your browser to an IP of any of your nodes and use the node port described in the output.
-- If you have chosen _LoadBalancer_, then use the IaaS provided LB IP
 
 ## JHipster registry
 

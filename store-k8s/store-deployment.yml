@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: store-app
-          image: docker.pkg.github.com/jhipsterapps/store/store
+          image: docker.pkg.github.com/jhipsterapps/kubernetes/store
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod
@@ -61,16 +61,6 @@ spec:
               value: http://admin:${jhipster.registry.password}@jhipster-registry.jhipster.svc.cluster.local:8761/eureka/
             - name: SPRING_DATASOURCE_URL
               value: jdbc:mysql://store-mysql.jhipster.svc.cluster.local:3306/store?useUnicode=true&characterEncoding=utf8&useSSL=false&useLegacyDatetimeCode=false&serverTimezone=UTC&createDatabaseIfNotExist=true
-            - name: JHIPSTER_METRICS_LOGS_ENABLED
-              value: 'true'
-            - name: JHIPSTER_LOGGING_LOGSTASH_ENABLED
-              value: 'true'
-            - name: JHIPSTER_LOGGING_LOGSTASH_HOST
-              value: jhipster-logstash
-            - name: SPRING_ZIPKIN_ENABLED
-              value: 'true'
-            - name: SPRING_ZIPKIN_BASE_URL
-              value: http://jhipster-zipkin
             - name: SPRING_SLEUTH_PROPAGATION_KEYS
               value: 'x-request-id,x-ot-span-context'
             - name: JAVA_OPTS

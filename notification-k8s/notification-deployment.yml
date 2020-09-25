@@ -46,7 +46,7 @@ spec:
               done
       containers:
         - name: notification-app
-          image: docker.pkg.github.com/jhipsterapps/notification/notification
+          image: docker.pkg.github.com/jhipsterapps/kubernetes/notification
           env:
             - name: SPRING_PROFILES_ACTIVE
               value: prod
@@ -63,16 +63,6 @@ spec:
               value: notification
             - name: SPRING_DATA_MONGODB_URI
               value: 'mongodb://notification-mongodb-0.notification-mongodb.jhipster:27017'
-            - name: JHIPSTER_METRICS_LOGS_ENABLED
-              value: 'true'
-            - name: JHIPSTER_LOGGING_LOGSTASH_ENABLED
-              value: 'true'
-            - name: JHIPSTER_LOGGING_LOGSTASH_HOST
-              value: jhipster-logstash
-            - name: SPRING_ZIPKIN_ENABLED
-              value: 'true'
-            - name: SPRING_ZIPKIN_BASE_URL
-              value: http://jhipster-zipkin
             - name: SPRING_SLEUTH_PROPAGATION_KEYS
               value: 'x-request-id,x-ot-span-context'
             - name: JAVA_OPTS
