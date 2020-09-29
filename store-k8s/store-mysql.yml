@@ -50,7 +50,6 @@ spec:
           volumeMounts:
             - name: data
               mountPath: /var/lib/mysql/
-              subPath: store
           resources:
             requests:
               memory: '512Mi'

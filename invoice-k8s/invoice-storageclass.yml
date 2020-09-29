@@ -15,12 +15,12 @@ spec:
   capacity:
     storage: 3Gi
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
   storageClassName: invoice-local-storage
   local:
-    path: /kubernetes-pv
+    path: /kubernetes-pv-invoice
   nodeAffinity:
     required:
       nodeSelectorTerms:

@@ -25,7 +25,6 @@ logSummary() {
 default() {
     suffix=k8s
     kubectl apply -f namespace.yml
-    kubectl apply -f storageclass.yml
     kubectl apply -f registry-${suffix}/
     kubectl apply -f invoice-${suffix}/
     kubectl apply -f notification-${suffix}/
