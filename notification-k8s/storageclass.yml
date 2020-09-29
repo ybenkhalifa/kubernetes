@@ -1,7 +1,7 @@
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  name: local-storage
+  name: notification-local-storage
   namespace: jhipster
 provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: Immediate
@@ -9,13 +9,13 @@ volumeBindingMode: Immediate
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: my-local-pv
+  name: notification-my-local-pv
   namespace: jhipster
 spec:
   capacity:
-    storage: 10Gi
+    storage: 3Gi
   accessModes:
-  - ReadWriteOnce
+  - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
   storageClassName: local-storage
