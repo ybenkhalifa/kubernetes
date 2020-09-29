@@ -5,3 +5,18 @@ metadata:
   namespace: jhipster
 provisioner: kubernetes.io/no-provisioner
 volumeBindingMode: Immediate
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: my-local-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+  - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  volumeMode: Filesystem
+  storageClassName: local-storage
+  local:
+    path: /kubernetes-pv
