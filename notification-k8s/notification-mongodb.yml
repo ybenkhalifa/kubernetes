@@ -304,7 +304,7 @@ spec:
         resources:
           requests:
             storage: '1Gi'
-        storageClassName: local-storage
+        storageClassName: notification-local-storage
 ---
 # Headless service for DNS record
 apiVersion: v1
