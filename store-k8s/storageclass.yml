@@ -18,7 +18,7 @@ spec:
   - ReadWriteMany
   persistentVolumeReclaimPolicy: Retain
   volumeMode: Filesystem
-  storageClassName: local-storage
+  storageClassName: store-local-storage
   local:
     path: /kubernetes-pv
   nodeAffinity:
