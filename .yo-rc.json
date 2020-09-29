@@ -10,7 +10,7 @@
     "kubernetesNamespace": "jhipster",
     "kubernetesServiceType": "LoadBalancer",
     "kubernetesUseDynamicStorage": true,
-    "kubernetesStorageClassName": "",
+    "kubernetesStorageClassName": "local-storage",
     "ingressDomain": "",
     "monitoring": "no",
     "istio": false
