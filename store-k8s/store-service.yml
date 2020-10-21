@@ -9,6 +9,8 @@ spec:
   selector:
     app: store
   type: LoadBalancer
+  externalIPs:
+  - 10.66.12.212
   ports:
     - name: http
       port: 8080
