@@ -67,8 +67,8 @@ spec:
               value: ' -Xmx256m -Xms256m'
           resources:
             requests:
-              memory: '512Mi'
-              cpu: '500m'
+              memory: '1Gi'
+              cpu: '1'
             limits:
               memory: '1Gi'
               cpu: '1'
