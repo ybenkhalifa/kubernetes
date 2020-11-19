@@ -30,4 +30,3 @@ spec:
           values:
           - kworker1
           - kworker2
-          - kmaster
